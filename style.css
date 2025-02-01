@@ -9,6 +9,7 @@ body {
     width: 50px;
 }
 
+
 .header {
     display: flex;
     background-color: lightblue;
@@ -21,6 +22,13 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center;
+
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
@@ -72,4 +80,32 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+
+.top-funded {
+    border: 3px solid gold;
+    box-shadow: 0 0 15px gold;
+    padding: 10px;
+    border-radius: 10px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px gold;
+    }
+    to {
+        box-shadow: 0 0 25px orange;
+    }
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .stats-container, .dark-mode .stats-card {
+    background-color: #333;
+    color: white;
 }
